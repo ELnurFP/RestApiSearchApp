@@ -59,8 +59,8 @@ class _Page1State extends State<Page1> {
                                     Text(postModel.post!.data![index].email!),
                               )
                             : postModel.post!.data![index].firstName!
-                                    .startsWith(query!.toUpperCase() +
-                                        query!.substring(1).toLowerCase())
+                                    .toLowerCase()
+                                    .startsWith(query!.toLowerCase())
                                 ? ListTile(
                                     leading: CircleAvatar(
                                         backgroundImage: NetworkImage(postModel
